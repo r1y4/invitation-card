@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css?family=Abel");
+@keyframes example {
+  10% {
+    color: #aaa;
+  }
+  20% {
+    color: #ccc;
+  }
+  30% {
+    color: #ddd;
+  }
+  40% {
+    color: #eee;
+  }
+  50% {
+    color: #ddd;
+  }
+  60% {
+    color: #ccc;
+  }
+  70% {
+    color: #aaa;
+  }
+  80% {
+    color: #999;
+  }
+  90% {
+    color: #998;
+  }
+  100% {
+    color: #888;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  perspective: 500px;
+}
+.father {
+  width: 85%;
+  height: 90%;
+  margin: 20px auto;
+  position: relative;
+  color: #fff;
+  transition: all 2s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.father:hover {
+  transform: rotateY(180deg);
+}
+.father > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  font-family: "Abel", sans-serif;
+  border-radius: 8px;
+}
+.front {
+  border: 2px solid #555;
+  z-index: 2;
+  background: #333;
+  backface-visibility: hidden;
+}
+.front header {
+  background: url(https://s19.postimg.org/53n91vjkj/1300x300.jpg);
+  background-size: cover;
+  opacity: 0.6;
+  border-radius: 8px;
+  height: 30%;
+}
+.father img {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #333;
+  border-radius: 10px;
+}
+.front h3 {
+  position: relative;
+  bottom: 50px;
+  color: #fff;
+  text-shadow: 1px 1px 3.5px #000;
+  font-size: 140%;
+  letter-spacing: 2px;
+  font-family: "Inconsolata ", sans-serif;
+  text-transform: uppercase;
+}
+.front p {
+  position: relative;
+  bottom: 50px;
+  color: #ddd;
+  text-transform: lowercase;
+}
+
+.front span {
+  position: relative;
+  bottom: 50px;
+  color: #888;
+  animation-name: example;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  text-transform: uppercase;
+}
+.back {
+  border: 2px solid #555;
+  z-index: 1;
+  background: #333;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+.back ul {
+  list-style: none;
+  padding: 50px 0;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  color: #aaa;
+}
+.back ul li {
+  animation-name: example;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  text-transform: uppercase;
+  padding: 5px 0;
+}
+li a.fa
+{
+  font-size:18px;
+}
+.back ul li a {
+  text-decoration:none;
+  color: #aaa555;
+  font-size: 20px;
+  text-decoration: none;
+}
+.back ul li a span {
+  opacity: 0;
+  color: #aaa555;
+  transition: all 0.4s ease;
+  animation-name: example 2;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+.back ul li a:hover span {
+  opacity: 1;
+}
+
+.back ul li.last-li {
+  margin-top: 50px;
+}
